@@ -26,12 +26,15 @@ O site é composto por três páginas principais:
 
 /ong-ads
 │
+
 ├── css/
 │ └── style.css
 │
+
 ├── js/
 │ └── main.js
 │
+
 ├── images/
 │ ├── logo.png
 │ ├── acao-comunitaria.jpg
@@ -39,6 +42,7 @@ O site é composto por três páginas principais:
 │ ├── projeto-1.jpg
 │ └── projeto-2.jpg
 │
+
 ├── index.html
 ├── projetos.html
 └── cadastro.html
@@ -70,7 +74,6 @@ O projeto está disponível publicamente no GitHub:
 
 🔗 **Repositório:** [https://github.com/larissavi25/ong-ads](https://github.com/larissavi25/ong-ads)
 
-*(Se desejar, pode futuramente ativar o **GitHub Pages** para gerar um link de visualização direta do site!)*
 
 ---
 
