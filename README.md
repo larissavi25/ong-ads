@@ -26,15 +26,12 @@ O site é composto por três páginas principais:
 
 /ong-ads
 │
-
 ├── css/
 │ └── style.css
 │
-
 ├── js/
 │ └── main.js
 │
-
 ├── images/
 │ ├── logo.png
 │ ├── acao-comunitaria.jpg
@@ -42,7 +39,6 @@ O site é composto por três páginas principais:
 │ ├── projeto-1.jpg
 │ └── projeto-2.jpg
 │
-
 ├── index.html
 ├── projetos.html
 └── cadastro.html
