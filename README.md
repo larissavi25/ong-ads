@@ -25,23 +25,20 @@ O site é composto por três páginas principais:
 📁 **Organização das pastas:**
 
 /ong-ads
-│
 ├── css/
-│ └── style.css
-│
+│   └── style.css
 ├── js/
-│ └── main.js
-│
-├── images/
-│ ├── logo.png
-│ ├── acao-comunitaria.jpg
-│ └── projetos/
-│ ├── projeto-1.jpg
-│ └── projeto-2.jpg
-│
+│   └── main.js
+├── imagens/
+│   ├── logo.png
+│   ├── acao-comunitaria.jpg
+│   └── projetos/
+│       ├── projeto-1.jpg
+│       └── projeto-2.jpg
 ├── index.html
 ├── projetos.html
 └── cadastro.html
+
 
 ---
 
