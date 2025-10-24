@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Entrega 2 - CSS Responsivo</title>
+
+  <!-- links para os CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="container" role="banner">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="logo" style="font-weight:700;color:var(--neutral-100)">Meu Projeto</div>
+      <nav class="nav" aria-label="Menu principal">
+        <div class="item">Home</div>
+        <div class="item">Projetos
+          <div class="dropdown">
+            <a class="dropdown-item" href="#">Projeto A</a>
+            <a class="dropdown-item" href="#">Projeto B</a>
+          </div>
+        </div>
+        <div class="item">Contato</div>
+      </nav>
+    </div>
+
+    <button class="hamburger" aria-label="Abrir menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main class="container" role="main" style="margin-top:var(--space-3);">
+    <section class="main">
+      <h1 style="font-size:var(--font-xxl); margin-bottom:var(--space-2)">Bem-vinda — Entrega 2</h1>
+
+      <div class="card" style="margin-bottom:var(--space-3);">
+        <h2 style="font-size:var(--font-xl)">Sobre esta entrega</h2>
+        <p>Esta pasta contém o CSS da Entrega 2: sistema de design, grid 12 colunas, componentes e responsividade.</p>
+        <span class="badge badge-new">Novo</span>
+      </div>
+
+      <h3 style="margin-bottom:var(--space-2)">Projetos</h3>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);">
+        <article class="card">
+          <h4>Projeto 1</h4>
+          <p>Descrição curta do projeto. Exemplo de card responsivo.</p>
+          <button class="btn">Ver</button>
+        </article>
+
+        <article class="card">
+          <h4>Projeto 2</h4>
+          <p>Descrição curta do projeto. Exemplo de card responsivo.</p>
+          <button class="btn">Ver</button>
+        </article>
+      </div>
+
+      <h3 style="margin-top:var(--space-4)">Formulário de contato</h3>
+      <form class="card" style="margin-top:var(--space-2)" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div style="display:flex;gap:var(--space-2);">
+          <button class="btn" type="submit">Enviar</button>
+          <button class="btn" type="reset">Limpar</button>
+        </div>
+        <div id="formAlert" style="margin-top:var(--space-2)" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h4>Informações</h4>
+        <p>Área da sidebar com badges e alertas.</p>
+        <div style="margin-top:var(--space-2)">
+          <span class="badge badge-sale">Promo</span>
+          <span class="badge">Categoria</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:var(--space-2)">
+        <h4>Alertas</h4>
+        <div class="alert alert-success">Tudo certo — exemplo de alert.</div>
+        <div class="alert alert-error">Erro — exemplo de alert.</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="container" style="margin-top:var(--space-4);padding:var(--space-2);">
+    <small>&copy; 2025 — Entrega 2 - Larissa</small>
+  </footer>
+
+  <!-- JS simples para validação e exibir hamburger (colar no final do arquivo) -->
+  <script>
+    // Validação simples do formulário
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      if (!name || !email) {
+        alertBox.innerHTML = '<div class="alert alert-error">Preencha nome e e-mail.</div>';
+        if(!name) form.name.classList.add('is-invalid');
+        if(!email) form.email.classList.add('is-invalid');
+        return;
+      }
+      alertBox.innerHTML = '<div class="alert alert-success">Mensagem enviada com sucesso (simulada).</div>';
+      form.reset();
+    });
+
+    // Hamburger toggle (mostra nav em mobile)
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    if(hamburger){
+      hamburger.addEventListener('click', ()=>{
+        if(nav.style.display === 'flex') nav.style.display = 'none';
+        else nav.style.display = 'flex';
+      });
+    }
+  </script>
+</body>
+</html>
