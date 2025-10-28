@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ONG Exemplo — missão, projetos e formas de apoio.">
+  <title>ONG Exemplo — Quem somos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cabeçalho do site -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Página inicial da ONG">
+        <img src="images/logo.png" alt="Logotipo da ONG Exemplo" class="logo">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção principal com destaque -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Transformando vidas com ações locais</h1>
+        <p class="lead">Conheça nossos projetos, junte-se como voluntário ou apoie com uma doação.</p>
+        <!-- Imagem ilustrativa -->
+        <img src="images/acao-comunitaria.jpg" alt="Voluntários da ONG em ação na comunidade" class="hero-img">
+        <p><a class="btn" href="projetos.html">Ver Projetos</a></p>
+      </div>
+    </section>
+
+    <!-- Seção institucional -->
+    <section class="about container" aria-labelledby="about-title">
+      <h2 id="about-title">Missão, Visão e Valores</h2>
+
+      <article>
+        <h3>Missão</h3>
+        <p>Contribuir para a melhoria de qualidade de vida por meio de ações educativas e de suporte social.</p>
+      </article>
+
+      <article>
+        <h3>Visão</h3>
+        <p>Ser referência regional em projetos de inclusão social até 2030.</p>
+      </article>
+
+      <article>
+        <h3>Valores</h3>
+        <ul>
+          <li>Transparência</li>
+          <li>Respeito</li>
+          <li>Colaboração</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Seção de contato -->
+    <section class="contact container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contato</h2>
+      <address>
+        Rua Exemplo, 123 — Bairro — Cidade/UF<br>
+        Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a><br>
+        E-mail: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a>
+      </address>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ONG Exemplo. Todos os direitos reservados.</p>
+      <nav aria-label="Links sociais">
+        <ul class="social-list">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Script para atualizar o ano automaticamente -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
