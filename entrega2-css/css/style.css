@@ -1,1 +1,24 @@
+/* Importa os módulos CSS */
+@import url('variables.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('utilities.css');
+
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
 
