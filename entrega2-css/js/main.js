@@ -1,28 +1,36 @@
 // Atualiza o ano no rodapé automaticamente
-document.querySelectorAll('#year, #year2').forEach(el => {
+document.querySelectorAll('#year').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
-// Máscara para CPF
-document.getElementById('cpf')?.addEventListener('input', function (e) {
-  let value = e.target.value.replace(/\D/g, '');
-  value = value.replace(/(\d{3})(\d)/, '$1.$2');
-  value = value.replace(/(\d{3})(\d)/, '$1.$2');
-  value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-  e.target.value = value;
-});
+// Máscaras de input (CPF, telefone, CEP)
+function applyMask(id, regexList) {
+  document.getElementById(id)?.addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    regexList.forEach(r => value = value.replace(r.pattern, r.replace));
+    e.target.value = value;
+  });
+}
 
-// Máscara para telefone
-document.getElementById('telefone')?.addEventListener('input', function (e) {
-  let value = e.target.value.replace(/\D/g, '');
-  value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-  value = value.replace(/(\d{5})(\d{4})$/, '$1-$2');
-  e.target.value = value;
-});
+applyMask('cpf', [
+  { pattern: /(\d{3})(\d)/, replace: '$1.$2' },
+  { pattern: /(\d{3})(\d)/, replace: '$1.$2' },
+  { pattern: /(\d{3})(\d{1,2})$/, replace: '$1-$2' }
+]);
 
-// Máscara para CEP
-document.getElementById('cep')?.addEventListener('input', function (e) {
-  let value = e.target.value.replace(/\D/g, '');
-  value = value.replace(/(\d{5})(\d)/, '$1-$2');
-  e.target.value = value;
+applyMask('telefone', [
+  { pattern: /^(\d{2})(\d)/g, replace: '($1) $2' },
+  { pattern: /(\d{5})(\d{4})$/, replace: '$1-$2' }
+]);
+
+applyMask('cep', [
+  { pattern: /(\d{5})(\d)/, replace: '$1-$2' }
+]);
+
+// Menu hambúrguer
+const toggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggle?.addEventListener('click', () => {
+  navList.classList.toggle('active');
 });
