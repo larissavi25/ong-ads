@@ -1,4 +1,3 @@
-// js/formValidation.js
 export function initFormValidation() {
   document.addEventListener('submit', (e) => {
     const form = e.target;
@@ -24,6 +23,11 @@ export function initFormValidation() {
         alert('Digite um telefone válido (somente números, com DDD).');
         return;
       }
+
+      // Armazena no localStorage
+      const cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+      cadastros.push({ nome, email, telefone, tipo });
+      localStorage.setItem('cadastros', JSON.stringify(cadastros));
 
       alert(`Cadastro enviado com sucesso! 🎉\nNome: ${nome}\nTipo: ${tipo}`);
       form.reset();
