@@ -3,33 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Entrega 2 - CSS Responsivo</title>
+  <title>ONG ADS — Entrega 2 CSS Responsivo</title>
 
   <!-- links para os CSS -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
-
 <body>
-  <header class="container" role="banner">
+  <header class="container site-header" role="banner">
     <div style="display:flex;align-items:center;gap:16px;">
-      <!-- 🔽 Logo agora aparece corretamente -->
-      <img src="images/logo.jpg" alt="Logo da ONG" style="height:60px; border-radius:8px;">
-      <div class="logo" style="font-weight:700;color:var(--neutral-100)">Meu Projeto</div>
+      <!-- LOGO -->
+      <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+        <img src="imagens/logo.png" alt="Logo da ONG ADS" style="width:48px;height:48px;border-radius:50%;">
+        <span class="logo" style="font-weight:700;color:var(--color-neutral-100);font-size:20px;">ONG ADS</span>
+      </a>
 
+      <!-- Navegação -->
       <nav class="nav" aria-label="Menu principal">
         <div class="item">Home</div>
         <div class="item">Projetos
           <div class="dropdown">
-            <a class="dropdown-item" href="#">Projeto A</a>
-            <a class="dropdown-item" href="#">Projeto B</a>
+            <a class="dropdown-item" href="#">Educação Pública</a>
+            <a class="dropdown-item" href="#">Clínica Social</a>
           </div>
         </div>
         <div class="item">Contato</div>
       </nav>
     </div>
 
+    <!-- Menu hambúrguer -->
     <button class="hamburger" aria-label="Abrir menu">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -37,37 +40,34 @@
     </button>
   </header>
 
-  <main class="container" role="main" style="margin-top:var(--space-3);">
+  <main class="container" role="main" style="margin-top:var(--space-3);display:grid;grid-template-columns:3fr 1fr;gap:var(--space-3);">
     <section class="main">
-      <h1 style="font-size:var(--font-xxl); margin-bottom:var(--space-2)">Bem-vinda — Entrega 2</h1>
+      <h1 style="font-size:var(--font-xl); margin-bottom:var(--space-2);color:var(--color-primary-dark)">Bem-vinda(o) à ONG ADS 💙</h1>
 
-      <div class="card" style="margin-bottom:var(--space-3);">
-        <h2 style="font-size:var(--font-xl)">Sobre esta entrega</h2>
-        <p>Esta pasta contém o CSS da Entrega 2: sistema de design, grid 12 colunas, componentes e responsividade.</p>
-        <span class="badge badge-new">Novo</span>
+      <div class="card" style="margin-bottom:var(--space-3);background:var(--color-primary-light);color:white;">
+        <h2 style="font-size:var(--font-lg)">Sobre esta entrega</h2>
+        <p>Atividade prática da disciplina de Desenvolvimento Web — Entrega 2. Aqui aplicamos CSS3 para criar um site acessível, responsivo e com sistema de design moderno.</p>
+        <span class="badge badge-new" style="background-color:var(--color-secondary-dark);">Novo</span>
       </div>
 
-      <h3 style="margin-bottom:var(--space-2)">Projetos</h3>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);">
-        
-        <!-- Card com imagem -->
+      <h3 style="margin-bottom:var(--space-2);color:var(--color-primary-dark)">Projetos em destaque</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-3);">
         <article class="card">
-          <img src="images/educacao.jpg" alt="Projeto Educação" style="width:100%; border-radius:12px; margin-bottom:8px;">
-          <h4>Projeto 1 - Educação</h4>
-          <p>Descrição curta do projeto de educação. Exemplo de card responsivo com imagem.</p>
-          <button class="btn">Ver</button>
+          <img src="imagens/educacao.jpg" alt="Crianças em sala de aula" style="width:100%;border-radius:var(--radius);margin-bottom:var(--space-2);">
+          <h4>Educação Pública</h4>
+          <p>Projetos que melhoram a qualidade da educação pública brasileira, focando no desenvolvimento integral de crianças e jovens.</p>
+          <button class="btn">Ver mais</button>
         </article>
 
-        <!-- Card com imagem -->
         <article class="card">
-          <img src="images/saude.jpg" alt="Projeto Saúde" style="width:100%; border-radius:12px; margin-bottom:8px;">
-          <h4>Projeto 2 - Saúde</h4>
-          <p>Descrição curta do projeto de saúde. Exemplo de card responsivo com imagem.</p>
-          <button class="btn">Ver</button>
+          <img src="imagens/saude.jpg" alt="Equipe de profissionais de saúde" style="width:100%;border-radius:var(--radius);margin-bottom:var(--space-2);">
+          <h4>Clínica de Saúde</h4>
+          <p>Projetos que ajudam em classes sociais baixas com especialistas de várias áreas da saúde, garantindo atendimento humanizado.</p>
+          <button class="btn">Ver mais</button>
         </article>
       </div>
 
-      <h3 style="margin-top:var(--space-4)">Formulário de contato</h3>
+      <h3 style="margin-top:var(--space-4);color:var(--color-primary-dark)">Formulário de contato</h3>
       <form class="card" style="margin-top:var(--space-2)" id="contactForm" novalidate>
         <div class="form-group">
           <label for="name">Nome</label>
@@ -87,32 +87,39 @@
         </div>
         <div id="formAlert" style="margin-top:var(--space-2)" aria-live="polite"></div>
       </form>
+
+      <!-- Sugestão de "Informações" -->
+      <div class="card" style="margin-top:var(--space-3);background:var(--color-neutral-100);">
+        <h4 style="color:var(--color-primary-dark)">Informações</h4>
+        <p>Nossa ONG atua em projetos de <strong>educação, saúde e inclusão social</strong>. Buscamos parcerias com escolas públicas, clínicas e voluntários para levar mais oportunidades a comunidades em situação de vulnerabilidade.</p>
+        <p>💌 Você pode se cadastrar como voluntário(a) ou parceiro(a) entrando em contato pelo formulário acima.</p>
+      </div>
     </section>
 
     <aside class="sidebar">
       <div class="card">
-        <h4>Informações</h4>
-        <p>Área da sidebar com badges e alertas.</p>
+        <h4>Notícias e Campanhas</h4>
+        <p>📚 Campanha atual: "Doe livros e mude histórias!" — arrecadação até 15/11.</p>
         <div style="margin-top:var(--space-2)">
-          <span class="badge badge-sale">Promo</span>
-          <span class="badge">Categoria</span>
+          <span class="badge badge-sale">Doações</span>
+          <span class="badge">Voluntariado</span>
         </div>
       </div>
-
       <div class="card" style="margin-top:var(--space-2)">
         <h4>Alertas</h4>
-        <div class="alert alert-success">Tudo certo — exemplo de alert.</div>
-        <div class="alert alert-error">Erro — exemplo de alert.</div>
+        <div class="alert alert-success">✅ Meta de arrecadação mensal atingida! Obrigado a todos os doadores.</div>
+        <div class="alert alert-info">📅 Próximo mutirão de saúde: 10/11 em Jardim Esperança.</div>
       </div>
     </aside>
   </main>
 
-  <footer class="container" style="margin-top:var(--space-4);padding:var(--space-2);">
-    <small>&copy; 2025 — Entrega 2 - Larissa</small>
+  <footer class="container site-footer">
+    <small>&copy; 2025 — ONG ADS | Desenvolvido por Larissa</small>
   </footer>
 
-  <!-- JS simples -->
+  <!-- JS -->
   <script>
+    // Validação simples do formulário
     const form = document.getElementById('contactForm');
     const alertBox = document.getElementById('formAlert');
     form.addEventListener('submit', (e) => {
@@ -129,12 +136,12 @@
       form.reset();
     });
 
+    // Menu hamburguer
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
     if(hamburger){
       hamburger.addEventListener('click', ()=>{
-        if(nav.style.display === 'flex') nav.style.display = 'none';
-        else nav.style.display = 'flex';
+        nav.classList.toggle('active');
       });
     }
   </script>
