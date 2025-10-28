@@ -17,58 +17,69 @@
         <ul class="nav-list">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="cadastro.html" class="active">Cadastro</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="container" aria-labelledby="form-title">
+    <section class="container form-section" aria-labelledby="form-title">
       <h1 id="form-title">Cadastro de Voluntário / Doador</h1>
+      <p class="form-intro">Preencha o formulário abaixo para participar de nossos projetos sociais.</p>
 
-      <form id="cadastroForm" action="#">
+      <form id="cadastroForm" class="cadastro-form" action="#">
         <fieldset>
           <legend>Dados pessoais</legend>
-
-          <label for="nome">Nome completo *</label>
-          <input id="nome" name="nome" type="text" required minlength="3" placeholder="Seu nome completo">
-
-          <label for="email">E‑mail *</label>
-          <input id="email" name="email" type="email" required placeholder="seunome@exemplo.com">
-
-          <label for="cpf">CPF *</label>
-          <input id="cpf" name="cpf" type="text" inputmode="numeric" required placeholder="000.000.000-00">
-
-          <label for="telefone">Telefone *</label>
-          <input id="telefone" name="telefone" type="tel" inputmode="tel" required placeholder="(11) 9xxxx-xxxx">
-
-          <label for="nascimento">Data de nascimento *</label>
-          <input id="nascimento" name="nascimento" type="date" required>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome completo *</label>
+              <input id="nome" name="nome" type="text" required minlength="3" placeholder="Seu nome completo">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" required placeholder="seunome@exemplo.com">
+            </div>
+            <div class="form-group">
+              <label for="cpf">CPF *</label>
+              <input id="cpf" name="cpf" type="text" inputmode="numeric" required placeholder="000.000.000-00">
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone *</label>
+              <input id="telefone" name="telefone" type="tel" inputmode="tel" required placeholder="(11) 9xxxx-xxxx">
+            </div>
+            <div class="form-group">
+              <label for="nascimento">Data de nascimento *</label>
+              <input id="nascimento" name="nascimento" type="date" required>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset>
           <legend>Endereço</legend>
-
-          <label for="cep">CEP *</label>
-          <input id="cep" name="cep" type="text" inputmode="numeric" required placeholder="00000-000">
-
-          <label for="endereco">Endereço</label>
-          <input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento">
-
-          <div class="grid-2">
-            <div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cep">CEP *</label>
+              <input id="cep" name="cep" type="text" inputmode="numeric" required placeholder="00000-000">
+            </div>
+            <div class="form-group">
+              <label for="endereco">Endereço</label>
+              <input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento">
+            </div>
+            <div class="form-group">
               <label for="cidade">Cidade</label>
               <input id="cidade" name="cidade" type="text">
             </div>
-            <div>
+            <div class="form-group">
               <label for="estado">Estado</label>
               <select id="estado" name="estado">
                 <option value="">Escolha...</option>
                 <option value="SP">SP</option>
                 <option value="RJ">RJ</option>
                 <option value="MG">MG</option>
-                <!-- Adicione mais estados conforme necessário -->
+                <option value="RS">RS</option>
+                <option value="BA">BA</option>
+                <option value="PE">PE</option>
               </select>
             </div>
           </div>
@@ -76,23 +87,27 @@
 
         <fieldset>
           <legend>Preferências</legend>
-
-          <label for="perfil">Eu quero me cadastrar como:</label>
-          <select id="perfil" name="perfil">
-            <option value="voluntario">Voluntário</option>
-            <option value="doador">Doador / Apoiador</option>
-            <option value="visitante">Visitante</option>
-          </select>
-
-          <label>
-            <input type="checkbox" name="termos" required>
-            Aceito receber comunicações e newsletters (obrigatório para cadastro)
-          </label>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="perfil">Eu quero me cadastrar como:</label>
+              <select id="perfil" name="perfil">
+                <option value="voluntario">Voluntário</option>
+                <option value="doador">Doador / Apoiador</option>
+                <option value="visitante">Visitante</option>
+              </select>
+            </div>
+            <div class="form-group checkbox">
+              <label>
+                <input type="checkbox" name="termos" required>
+                Aceito receber comunicações e newsletters (obrigatório para cadastro)
+              </label>
+            </div>
+          </div>
         </fieldset>
 
-        <p>
+        <div class="form-actions">
           <button type="submit" class="btn">Enviar cadastro</button>
-        </p>
+        </div>
       </form>
     </section>
   </main>
@@ -103,7 +118,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Atualiza o ano no rodapé
-    document.getElementById('year').textContent = new Date().getFul
+  <script src="js/main.js"></script>
+</body>
+</html>
