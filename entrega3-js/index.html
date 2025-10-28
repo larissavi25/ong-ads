@@ -6,22 +6,38 @@
   <meta name="description" content="ONG Exemplo — voluntariado, doações e projetos sociais">
   <title>ONG Exemplo</title>
 
-  <!-- CSS principal -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Fonte e ícones opcionais -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Corrige problema de navegação no GitHub Pages -->
+  <script>
+    // Se acessar diretamente uma rota, volta para o index.html
+    if (!location.pathname.endsWith("index.html") && location.pathname.split("/").length > 3) {
+      location.replace("/entrega3-js/");
+    }
+  </script>
 </head>
+
 <body>
   <!-- Cabeçalho -->
   <header class="header">
     <div class="container">
-      <h1 class="logo"><a href="/" data-link>ONG Exemplo</a></h1>
+      <h1 class="logo">
+        <a href="/entrega3-js/" data-link>
+          <img src="images/logo.png" alt="ONG Exemplo" class="logo-img">
+        </a>
+      </h1>
       <nav class="menu">
         <ul>
-          <li><a href="/" data-link>Home</a></li>
-          <li><a href="/projetos" data-link>Projetos</a></li>
-          <li><a href="/cadastro" data-link>Cadastro</a></li>
+          <li><a href="/entrega3-js/" data-link>Home</a></li>
+          <li><a href="/entrega3-js/projetos" data-link>Projetos</a></li>
+          <li><a href="/entrega3-js/cadastro" data-link>Cadastro</a></li>
         </ul>
       </nav>
     </div>
@@ -29,14 +45,14 @@
 
   <!-- Conteúdo dinâmico -->
   <main id="content" class="main-content">
-    <!-- O conteúdo das páginas será carregado aqui via JS -->
+    <!-- O conteúdo das páginas será carregado via JS -->
   </main>
 
   <!-- Rodapé -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 ONG Exemplo — Todos os direitos reservados.</p>
-      <p>Desenvolvido para a Atividade 2 — CSS3 e JS Avançado</p>
+      <p>Desenvolvido para a Atividade 3 — CSS3 e JS Avançado</p>
     </div>
   </footer>
 
