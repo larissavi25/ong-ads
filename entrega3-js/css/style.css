@@ -167,3 +167,9 @@ input, select, textarea {
   padding: 1rem 0;
   margin-top: 3rem;
 }
+
+.logo-img {
+  height: 50px;
+  vertical-align: middle;
+}
+
