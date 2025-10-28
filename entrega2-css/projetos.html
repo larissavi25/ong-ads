@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Projetos da ONG Exemplo — voluntariado e doações">
+  <title>Projetos — ONG Exemplo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Página inicial">
+        <img src="images/logo.png" alt="Logotipo da ONG Exemplo" class="logo">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="proj-title">
+      <h1 id="proj-title">Nossos Projetos</h1>
+      <p>Conheça nossas iniciativas sociais e veja como você pode se envolver.</p>
+
+      <ul class="projects-list">
+        <li class="project-card">
+          <figure>
+            <img src="images/projetos/projeto-1.jpg" alt="Crianças estudando em sala de aula">
+            <figcaption>Projeto Educação</figcaption>
+          </figure>
+          <h2>Projeto Educação</h2>
+          <p>Atividades de reforço escolar para crianças em situação de vulnerabilidade.</p>
+          <p><a href="projeto-educacao.html" class="btn">Saiba mais</a></p>
+        </li>
+
+        <li class="project-card">
+          <figure>
+            <img src="images/projetos/projeto-2.jpg" alt="Voluntários em ação em campanha de saúde">
+            <figcaption>Projeto Saúde</figcaption>
+          </figure>
+          <h2>Projeto Saúde</h2>
+          <p>Campanhas de prevenção e apoio a famílias.</p>
+          <p><a href="projeto-saude.html" class="btn">Saiba mais</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Nova seção: Voluntariado -->
+    <section class="container" aria-labelledby="volunt-title">
+      <h2 id="volunt-title">Seja um Voluntário</h2>
+      <p>Tem interesse em participar de nossos projetos? <a href="cadastro.html">Cadastre-se aqui</a> e faça parte da transformação social!</p>
+    </section>
+
+    <!-- Nova seção: Como Doar -->
+    <section class="container" aria-labelledby="doar-title">
+      <h2 id="doar-title">Como Doar</h2>
+      <p>Você pode apoiar financeiramente nossas ações sociais. Em breve lançaremos nossa plataforma de doações online. Fique atento!</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ONG Exemplo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
