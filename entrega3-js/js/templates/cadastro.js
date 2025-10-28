@@ -1,4 +1,3 @@
-// js/templates/cadastro.js
 export const template = `
 <section class="cadastro">
   <h2>Cadastro de Voluntário / Doador</h2>
