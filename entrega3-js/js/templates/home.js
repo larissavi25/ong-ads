@@ -8,8 +8,8 @@ export const template = `
   </div>
 
   <div class="cta">
-    <a href="/entrega3-js/projetos" data-link class="btn">Conheça nossos projetos</a>
-    <a href="/entrega3-js/cadastro" data-link class="btn btn-secundario">Seja um voluntário</a>
+    <a href="#/projetos" data-link class="btn">Conheça nossos projetos</a>
+    <a href="#/cadastro" data-link class="btn btn-secundario">Seja um voluntário</a>
   </div>
 </section>
 `;
