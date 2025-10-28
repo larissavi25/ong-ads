@@ -173,3 +173,20 @@ input, select, textarea {
   vertical-align: middle;
 }
 
+/* Centraliza título e subtítulo da seção de cadastro */
+.cadastro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cadastro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1f4d2b; /* opcional: cor igual à do tema */
+}
+
+.cadastro p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
