@@ -1,19 +1,24 @@
-// js/router.js
 export function router() {
+  const basePath = '/entrega3-js'; // pasta base no GitHub Pages
+
   const routes = {
-    '/': '/js/templates/home.js',
-    '/projetos': '/js/templates/projetos.js',
-    '/cadastro': '/js/templates/cadastro.js'
+    [`${basePath}/`]: `${basePath}/js/templates/home.js`,
+    [`${basePath}/projetos`]: `${basePath}/js/templates/projetos.js`,
+    [`${basePath}/cadastro`]: `${basePath}/js/templates/cadastro.js`
   };
 
   async function handleRoute(path) {
-    const route = routes[path] || routes['/'];
-    const { template } = await import(route);
-    document.querySelector('#content').innerHTML = template;
-    window.scrollTo(0, 0); // volta pro topo ao trocar de página
+    const route = routes[path] || routes[`${basePath}/`];
+    try {
+      const { template } = await import(route);
+      document.querySelector('#content').innerHTML = template;
+      window.scrollTo(0, 0);
+    } catch (error) {
+      document.querySelector('#content').innerHTML = `<p style="text-align:center;color:red;">Erro ao carregar a página.</p>`;
+      console.error('Erro ao importar o template:', error);
+    }
   }
 
-  // evento para links internos
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[data-link]');
     if (link) {
@@ -24,9 +29,7 @@ export function router() {
     }
   });
 
-  // navegação pelo histórico
   window.addEventListener('popstate', () => handleRoute(location.pathname));
 
-  // carregar rota inicial
   handleRoute(location.pathname);
 }
