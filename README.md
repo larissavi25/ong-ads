@@ -75,7 +75,7 @@ Na **terceira entrega**, foram adicionadas **funcionalidades dinâmicas** utiliz
 ## 💻 Acesso ao Projeto
 
 🔗 **Repositório:** [github.com/larissavi25/ong-ads](https://github.com/larissavi25/ong-ads)  
-🌐 **Versão online:** [larissavi25.github.io/ong-ads/entrega3-js/index.html](https://larissavi25.github.io/ong-ads/entrega3-js/index.html)
+🌐 **Versão online:** [larissavi25.github.io/ong-ads/](https://larissavi25.github.io/ong-ads/)
 
 ---
 
