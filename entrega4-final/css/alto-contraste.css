@@ -1,0 +1,19 @@
+:root {
+  --cor-primaria: #ffffff;
+  --cor-fundo: #000000;
+  --cor-texto: #ffffff;
+  --cor-secundaria: #00ff88;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+a {
+  color: var(--cor-secundaria);
+}
+
+header, footer {
+  background-color: #111;
+}
