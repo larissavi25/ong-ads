@@ -1,0 +1,30 @@
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-base);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+button {
+  background-color: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 3px solid var(--cor-botao-texto);
+  outline-offset: 2px;
+}
