@@ -1,0 +1,31 @@
+:root {
+  --cor-fundo: #fff;
+  --cor-texto: #000;
+  --cor-primaria: #007acc;
+  --cor-secundaria: #004080;
+  --cor-botao-fundo: var(--cor-primaria);
+  --cor-botao-texto: #fff;
+  --fonte-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modo alto contraste */
+@media (prefers-contrast: more) {
+  :root {
+    --cor-fundo: #000;
+    --cor-texto: #fff;
+    --cor-primaria: #ff0;
+    --cor-botao-fundo: #000;
+    --cor-botao-texto: #ff0;
+  }
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-primaria: #1e90ff;
+    --cor-botao-fundo: #1e90ff;
+    --cor-botao-texto: #e0e0e0;
+  }
+}
