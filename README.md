@@ -1,4 +1,4 @@
-# 🕊️ Projeto ONG — Plataforma Web (Atividades 1, 2 e 3)
+# 🕊️ Projeto ONG — Plataforma Web (Atividades 1, 2, 3 e 4)
 
 Este projeto foi desenvolvido como parte da disciplina de **Desenvolvimento Front-End**, com o objetivo de criar e evoluir uma **plataforma digital para uma ONG fictícia**, aplicando os conceitos de **HTML5**, **CSS3** e **JavaScript**.
 
@@ -59,6 +59,29 @@ Na **terceira entrega**, foram adicionadas **funcionalidades dinâmicas** utiliz
 > O site agora é totalmente funcional, com interações em tempo real, validações automáticas e uma navegação fluida — unindo **HTML, CSS e JavaScript** de forma integrada.
 
 ---
+
+## 🚀 Atividade 4 — Versão Final (Acessibilidade e Otimização)
+
+Na **quarta e última entrega**, o projeto foi aprimorado com foco em **acessibilidade (WCAG 2.1)**, **otimização para produção** e **boas práticas de versionamento (GitFlow)**.  
+Esta versão consolida todas as etapas anteriores, entregando uma aplicação completa, acessível e otimizada para o ambiente de produção.
+
+### 🧩 Melhorias Implementadas
+
+- **Navegação por teclado** em todos os componentes;  
+- **Suporte a leitores de tela**, com uso de `aria-label`, `alt` e `role`;  
+- **Estrutura HTML totalmente semântica** (`header`, `main`, `nav`, `section`, `footer`);  
+- **Modo de alto contraste e tema escuro** acessível;  
+- **Contraste mínimo de 4.5:1** em todos os textos;  
+- **Arquivos minificados** (`HTML`, `CSS`, `JS`) para melhor desempenho;  
+- **Imagens otimizadas** para web;  
+- **Organização de versionamento** por branch (`entrega4-final`);  
+- **Deploy atualizado** via **GitHub Pages**.
+
+### ⚙️ Resultados e Boas Práticas
+
+> Com esta entrega final, o projeto atinge um padrão profissional de desenvolvimento Front-End,  
+> aplicando **acessibilidade digital, otimização de performance e controle de versão com GitFlow**.  
+> O site agora está preparado para uso real em ambiente de produção.
 
 ## 🛠️ Tecnologias Utilizadas
 
